@@ -1,0 +1,47 @@
+.main {
+  margin-top: 20%;
+  border-color: tomato;
+  border: 2px;
+}
+
+.context p {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  border-radius: 10px;
+  font-size: 1.5rem;
+  margin-left: 35%;
+  border: 2px solid black;
+  width: 30%;
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  text-align: center;
+}
+
+input:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+*{
+  background-color: aqua;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  max-width: 600px;
+  text-align: center;
+}

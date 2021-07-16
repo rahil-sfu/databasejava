@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link rel="stylesheet" href="/CSS/db.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>TABLE</h1>
+      <table class="styled-table">
+        <tr>
+          <th>Name</th>
+          <th>Color</th>
+        </tr>
+        <tr th:each="n : ${records}">
+          <td>
+            <a
+              th:href="@{/get/{id}(id=${n.name})}"
+              th:text="${n.name}"
+              th:object="${rectangle}"
+              th:field="*{name}"
+            ></a>
+          </td>
+          <td th:text="${n.color}"></td>
+          <td>
+            <form th:action="@{/d/{id}(id=${n.name})}">
+              <input type="submit" value="Remove" />
+            </form>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

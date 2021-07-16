@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" href="/CSS/db.css" />
+</head>
+  <body>
+    <div class="container">
+      <h1>Details</h1>
+      <table class="styled-table" th:each="n : ${r}">
+        <tr>
+          <th>Name</th>
+          <th id="name_1" th:text="${n.name}"></td>
+        </tr>
+         <tr>
+          <th >Color</th>
+          <th id="color_1" th:text="${n.color}"></td>
+        </tr>
+         <tr>
+          <th>Height</th>
+          <th id="height_1" th:text="${n.height}"></td>
+        </tr>
+         <tr>
+          <th>Width</th>
+          <th id="width_1" th:text="${n.width}"></td>
+        </tr>
+      </table>
+    </div>
+    <canvas height="1000" width="1000" id="my_canvas" ></canvas>;
+    <script>
+      var canvas = document.getElementById("my_canvas");
+      var cntx = canvas.getContext("2d");
+
+      var name = document.getElementById('name_1').innerHTML;
+      cntx.fillStyle = document.getElementById('color_1').innerHTML;
+      cntx.fillRect(50,50,document.getElementById('width_1').innerHTML, document.getElementById('height_1').innerHTML);
+      cntx.font = " bold 15px Arial";
+      cntx.fillStyle = "black";
+      cntx.fillText(name,document.getElementById('width_1').innerHTML/2 +25, document.getElementById('height_1').innerHTML/2 + 50);
+    </script>
+  </body>
+</html>
